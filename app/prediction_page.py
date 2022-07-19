@@ -4,7 +4,7 @@ import numpy as np
 def show_prediction_page():
     st.title("MRI Tumour Detector")
     st.write("""### Upload MRI Image""")
-    uploaded_file = st.file_uploader("Choose a file")
+    uploaded_file = st.file_uploader("Choose a file",type=["jpg","png"])
     if uploaded_file is not None:
         img = Image.open(uploaded_file)
         prediction = get_prediction(img)
