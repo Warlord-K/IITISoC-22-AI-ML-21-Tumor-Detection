@@ -31,11 +31,11 @@ def main():
         imgs = st.columns([1,1,1])
         for i,img in enumerate(imgs):
             if ims[i][0] == 'b':
-                labels.append("pneumonia bacteria")
+                labels.append("Pneumonia Bacteria")
             elif ims[i][0] == 'n':
-                labels.append("normal")
+                labels.append("Normal")
             elif ims[i][0] == 'v':
-                labels.append("virus")
+                labels.append("Virus")
             # else:
             #     labels.append("Meningioma")
 
@@ -47,7 +47,7 @@ def main():
 
 
 def get_prediction(img):
-    dec = ["virus_pneumonia","bacteria_pneumonia","normal"]
+    dec = ["Virus Pneumonia","Bacteria Pneumonia","Normal"]
     #pred = np.random.choice(dec)
     pred = st.session_state.pneumonia_model.predict(tf.data.Dataset.from_tensor_slices([img]).batch(1))
     prediction = dec[np.argmax(pred)]
