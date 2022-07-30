@@ -1,4 +1,4 @@
-from src import prediction_page,about,mail,home
+from src import prediction_page,about,mail,home,pneumonia
 import streamlit as st
 
 
@@ -13,7 +13,7 @@ def init():
         'About Us': about.main,
         'Message Us': mail.main,
         'Covid - 19 Dectection': prediction_page.main,
-        'Pneumonia Detection':prediction_page.main
+        'Pneumonia Detection':pneumonia.main
     }
 
 def draw_style():
