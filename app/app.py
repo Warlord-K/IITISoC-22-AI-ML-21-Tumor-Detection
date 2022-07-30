@@ -1,4 +1,4 @@
-from src import prediction_page,about,mail,home
+from src import prediction_page,about,mail,home,blood_cancer
 import streamlit as st
 
 
@@ -13,7 +13,8 @@ def init():
         'About Us': about.main,
         'Message Us': mail.main,
         'Covid - 19 Dectection': prediction_page.main,
-        'Pneumonia Detection':prediction_page.main
+        'Pneumonia Detection':prediction_page.main,
+        'Blood Cells Detection':blood_cancer.main
     }
 
 def draw_style():
@@ -86,7 +87,7 @@ def main():
         if st.session_state.project and st.session_state.model:
             st.selectbox(
                 'Models',
-                ['Tumour Detection','Covid - 19 Dectection','Pneumonia Detection'],
+                ['Tumour Detection','Covid - 19 Dectection','Pneumonia Detection','Blood Cells Detection'],
                 key='set',
                 on_change=set_page,
             )
