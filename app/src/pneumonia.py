@@ -73,7 +73,7 @@ def load_model():
         output_layer
     ])
     path = os.path.realpath(__file__)[:-16]
-    model.load_weights(f'{path}/checkpoints/mobilenetv2_55epochs')
+    model.load_weights(f'{path}/checkpoints/pnemonia_final_epochs')
     return model
 
 
