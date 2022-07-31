@@ -1,4 +1,4 @@
-from src import prediction_page,about,mail,home,pneumonia,blood_cancer
+from src import prediction_page,about,mail,home,pneumonia,blood_cancer,covid19
 import streamlit as st
 
 
@@ -12,7 +12,7 @@ def init():
         'Homepage': home.main,
         'About Us': about.main,
         'Message Us': mail.main,
-        'Covid - 19 Dectection': prediction_page.main,
+        'Covid - 19 Dectection': covid19.main,
         'Pneumonia Detection':pneumonia.main,
         'Blood Cells Detection':blood_cancer.main
     }
