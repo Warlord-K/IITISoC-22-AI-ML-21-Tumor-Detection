@@ -12,7 +12,7 @@ def main():
     if "covid_model" not in st.session_state:
         init()
     st.title("Covid19 Detector")
-    st.write("""### Upload MRI Image""")
+    st.write("""### Upload X-Ray Image""")
     uploaded_file = st.file_uploader("",type=["jpg","png"])
     if uploaded_file is not None:
         img = np.array(Image.open(uploaded_file).convert("RGB").resize((224,224)))/255
@@ -23,7 +23,7 @@ def main():
         st.image(st.session_state.img)
 
         
-    with st.expander("Don't have any MRI Scans?"):
+    with st.expander("Don't have any X-Ray Scans?"):
         path = os.path.realpath(__file__)[:-14]
         ims = np.random.choice(os.listdir(f"{path}/testcovid"),3,replace = False)
         labels = []
