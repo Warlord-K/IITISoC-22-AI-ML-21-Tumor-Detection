@@ -41,9 +41,6 @@ def main():
             img.button(f" ({i+1}){labels[i]}",on_click = get_prediction,args =(images[i],))
         
 
-    
-
-
 def get_prediction(img):
     dec = ["covid","normal","viral pneumonia"]
     #pred = np.random.choice(dec)
