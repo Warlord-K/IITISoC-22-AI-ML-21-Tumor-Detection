@@ -25,20 +25,18 @@ def main():
         
     with st.expander("Don't have any MRI Scans?"):
         path = os.path.realpath(__file__)[:-14]
-        ims = np.random.choice(os.listdir(f"{path}/test_files"),3,replace = False)
+        ims = np.random.choice(os.listdir(f"{path}/testcovid"),3,replace = False)
         labels = []
-        images = [np.array(Image.open(f"{path}/test_files/{i}").convert("RGB").resize((224,224)))/255 for i in ims]
+        images = [np.array(Image.open(f"{path}/testcovid/{i}").convert("RGB").resize((224,224)))/255 for i in ims]
         imgs = st.columns([1,1,1])
         for i,img in enumerate(imgs):
-            if ims[i][3:5] == 'no':
-                labels.append("No Tumour")
-            elif ims[i][3:5] == 'pi':
-                labels.append("Pituitary")
-            elif ims[i][3:5] == 'gl':
-                labels.append("Glioma")
-            else:
-                labels.append("Meningioma")
-
+            if ims[i][0:2] == 'CO':
+                labels.append("covid")
+            elif ims[i][0:2] == 'No':
+                labels.append("Normal")
+            elif ims[i][0:2] == 'Vi':
+                labels.append("pneumonia")
+        
             img.image(images[i])
             img.button(f" ({i+1}){labels[i]}",on_click = get_prediction,args =(images[i],))
         
@@ -47,7 +45,7 @@ def main():
 
 
 def get_prediction(img):
-    dec = ["Meningioma","Pituitary","Glioma","No Tumor"]
+    dec = ["covid","normal","viral pneumonia"]
     #pred = np.random.choice(dec)
     pred = st.session_state.covid_model.predict(tf.data.Dataset.from_tensor_slices([img]).batch(1))
     prediction = dec[np.argmax(pred)]
@@ -73,7 +71,7 @@ def load_model():
         output_layer
     ])
     path = os.path.realpath(__file__)[:-14]
-    model.load_weights(f'{path}/checkpoints/covid19lr0001epoch20')
+    model.load_weights(f'{path}/checkpoints/50epoch0001')
     
     return model
 
