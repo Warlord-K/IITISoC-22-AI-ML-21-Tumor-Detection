@@ -11,7 +11,7 @@ def init():
 def main():
     if "covid_model" not in st.session_state:
         init()
-    st.title("covid19 Detector")
+    st.title("Covid19 Detector")
     st.write("""### Upload MRI Image""")
     uploaded_file = st.file_uploader("",type=["jpg","png"])
     if uploaded_file is not None:
@@ -31,18 +31,18 @@ def main():
         imgs = st.columns([1,1,1])
         for i,img in enumerate(imgs):
             if ims[i][0:2] == 'CO':
-                labels.append("covid")
+                labels.append("Covid")
             elif ims[i][0:2] == 'No':
                 labels.append("Normal")
             elif ims[i][0:2] == 'Vi':
-                labels.append("pneumonia")
+                labels.append("Viral pneumonia")
         
             img.image(images[i])
             img.button(f" ({i+1}){labels[i]}",on_click = get_prediction,args =(images[i],))
         
 
 def get_prediction(img):
-    dec = ["covid","normal","viral pneumonia"]
+    dec = ["Covid","Normal","Viral pneumonia"]
     #pred = np.random.choice(dec)
     pred = st.session_state.covid_model.predict(tf.data.Dataset.from_tensor_slices([img]).batch(1))
     prediction = dec[np.argmax(pred)]
