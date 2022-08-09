@@ -3,7 +3,7 @@ from PIL import Image
 import numpy as np
 import tensorflow as tf
 import os
-
+import time
 def init():
     st.session_state.covid_model = load_model()
     st.session_state.selected = False
@@ -19,7 +19,11 @@ def main():
         prediction = get_prediction(img)
         #st.subheader(f"Tumor Type is {prediction}")
     if st.session_state.selected:
-        
+        prog_bar = st.progress(0)
+        for i in range(100):
+            time.sleep(0.01)
+            prog_bar.progress(i+1)
+        prog_bar.empty()
         st.subheader(f"Prediction is {st.session_state.prediction}")
         
         if st.session_state.prediction == "Covid":
