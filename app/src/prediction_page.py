@@ -3,6 +3,7 @@ from PIL import Image
 import numpy as np
 import tensorflow as tf
 import os
+import time
 
 def init():
     st.session_state.tumour_model = load_model()
@@ -16,10 +17,17 @@ def main():
     uploaded_file = st.file_uploader("",type=["jpg","png"])
     if uploaded_file is not None:
         img = np.array(Image.open(uploaded_file).convert("RGB").resize((224,224)))/255
-        prediction = get_prediction(img)
+        get_prediction(img)
         #st.subheader(f"Tumor Type is {prediction}")
     if st.session_state.selected:
+        prog_bar = st.progress(0)
+        for i in range(100):
+            time.sleep(0.01)
+            prog_bar.progress(i+1)
+        prog_bar.empty()
         st.subheader(f"Prediction is {st.session_state.prediction}")
+        if st.session_state.prediction == "No Tumor":
+            st.success("Congratulations! You have No Tumour.")
         st.image(st.session_state.img)
 
         
@@ -41,6 +49,8 @@ def main():
 
             img.image(images[i])
             img.button(f" ({i+1}){labels[i]}",on_click = get_prediction,args =(images[i],))
+            
+      
         
 
     
@@ -49,6 +59,7 @@ def main():
 def get_prediction(img):
     dec = ["Meningioma","Pituitary","Glioma","No Tumor"]
     #pred = np.random.choice(dec)
+    
     pred = st.session_state.tumour_model.predict(tf.data.Dataset.from_tensor_slices([img]).batch(1))
     prediction = dec[np.argmax(pred)]
     st.session_state.prediction = prediction

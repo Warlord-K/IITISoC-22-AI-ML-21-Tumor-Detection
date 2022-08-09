@@ -85,7 +85,7 @@ def main():
             project.button('Home', on_click=set_page, args=('Homepage', True))
 
         if st.session_state.project and st.session_state.model:
-            st.selectbox(
+            st.radio(
                 'Models',
                 ['Tumour Detection','Covid - 19 Dectection','Pneumonia Detection','Blood Cells Detection'],
                 key='set',
