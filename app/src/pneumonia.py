@@ -12,14 +12,24 @@ def main():
     if "pneumonia_model" not in st.session_state:
         init()
     st.title("Pneumonia Detector")
-    st.write("""### Upload chest xray Image""")
+    st.write("""### Upload Chest Xray Image""")
+    
     uploaded_file = st.file_uploader("",type=["jpg","png"])
     if uploaded_file is not None:
         img = np.array(Image.open(uploaded_file).convert("RGB").resize((224,224)))/255
         prediction = get_prediction(img)
         #st.subheader(f"Tumor Type is {prediction}")
+
+        
+
     if st.session_state.selected:
         st.subheader(f"Prediction is {st.session_state.prediction}")
+        if st.session_state.prediction == "Bacteria Pneumonia":
+            st.markdown('##### The model indicates that the patient has Bacterial Pneumonia,Bacterial pneumonia is an infection of your lungs caused by certain bacteria. The most common one is Streptococcus (pneumococcus), but other bacteria can cause it too.<a href = "https://www.mayoclinic.org/diseases-conditions/pneumonia/symptoms-causes/syc-20354204#:~:text=and%20your%20lungs-,Pneumonia%20and%20your%20lungs,within%20your%20lungs%20(alveoli).">follow this link to know more.</a>',unsafe_allow_html=True)
+        if st.session_state.prediction == "Virus Pneumonia":
+            st.markdown('##### The model indicates that the patient has Virus Pneumonia,Viral pneumonia is an infection of your lungs caused by a virus. The most common cause is the flu, but you can also get viral pneumonia from the common cold and other viruses.<a href = "https://www.mayoclinic.org/diseases-conditions/pneumonia/symptoms-causes/syc-20354204#:~:text=and%20your%20lungs-,Pneumonia%20and%20your%20lungs,within%20your%20lungs%20(alveoli).">follow this link to know more.</a>',unsafe_allow_html=True)        
+        if st.session_state.prediction == "Normal":
+            st.markdown('##### Congratulations,the model indicates that the patient is normal,if you seem to get any symptoms please consult a doctor.')
         st.image(st.session_state.img)
 
         
