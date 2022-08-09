@@ -12,12 +12,14 @@ def main():
     if "pneumonia_model" not in st.session_state:
         init()
     st.title("Pneumonia Detector")
-    st.write("""### Upload chest xray Image""")
+    st.write("""### Upload Chest Xray Image""")
+    
     uploaded_file = st.file_uploader("",type=["jpg","png"])
     if uploaded_file is not None:
         img = np.array(Image.open(uploaded_file).convert("RGB").resize((224,224)))/255
         prediction = get_prediction(img)
         #st.subheader(f"Tumor Type is {prediction}")
+        <a href="https://www.mayoclinic.org/diseases-conditions/pneumonia/symptoms-causes/syc-20354204#:~:text=Pneumonia%20is%20an%20infection%20that,and%20fungi%2C%20can%20cause%20pneumonia.">Want to know more about pneumonia?,unsafe_allow_html</a>
     if st.session_state.selected:
         st.subheader(f"Prediction is {st.session_state.prediction}")
         st.image(st.session_state.img)
