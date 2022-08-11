@@ -26,6 +26,15 @@ def main():
             prog_bar.progress(i+1)
         prog_bar.empty()
         st.subheader(f"Prediction is {st.session_state.prediction}")
+        if st.session_state.prediction == "Meningioma":
+            st.error('The Model indicates that the patient has Meningioma tumour, Meningioma is a tumor that forms on membranes that covers the brain and spinal cord just inside the skull.Overall, meningiomas are the most common type of primary brain tumor. ') 
+            st.markdown('##### <a href = "https://www.cancer.gov/rare-brain-spine-tumor/tumors/meningioma#:~:text=A%20meningioma%20is%20a%20primary,grade%20meningiomas%20are%20very%20rare."> Know more🔗</a>',unsafe_allow_html=True)  
+        if st.session_state.prediction == "Pituitary":
+            st.error('The Model indicates that the patient has Pituitary tumour, Pituitary tumours are abnormal growths that develop in your pituitary gland.')
+            st.markdown('##### <a href = "https://www.mayoclinic.org/diseases-conditions/pituitary-tumors/symptoms-causes/syc-20350548#:~:text=Pituitary%20tumors%20are%20abnormal%20growths,produce%20lower%20levels%20of%20hormones."> Know more🔗</a>',unsafe_allow_html=True)  
+        if st.session_state.prediction == "Glioma":
+             st.error('The Model indicates that the patient has Glioma tumour, Glioma is a type of tumor that occurs in the brain and spinal cord.') 
+             st.markdown('##### <a href = "https://www.mayoclinic.org/diseases-conditions/glioma/symptoms-causes/syc-20350251#:~:text=Glioma%20is%20a%20type%20of,glial%20cells%20can%20produce%20tumors."> Know more🔗</a>',unsafe_allow_html=True)  
         if st.session_state.prediction == "No Tumor":
             st.success("Congratulations! You have No Tumour.")
         st.image(st.session_state.img)
