@@ -28,16 +28,16 @@ def main():
         st.subheader(f"Prediction is {st.session_state.prediction}")
         if st.session_state.prediction == "Lymphocyte":
             st.success('The Model indicates that the Blood Cell identified is Lymphocyte.A lymphocyte is a type of white blood cell in the immune system of most vertebrates. Lymphocytes include natural killer cells, T cells, and B cells.')
-            st.markdown('##### <a href = "https://en.wikipedia.org/wiki/Lymphocyte">Know more.</a>',unsafe_allow_html=True)
+            st.markdown('##### <a href = "https://en.wikipedia.org/wiki/Lymphocyte">Know more 🔗</a>',unsafe_allow_html=True)
         if st.session_state.prediction == "Neutrophil":
             st.success('The Model indicates that the Blood Cell identified is Neutrophil.Neutrophils are the most abundant type of Granulocytes and make up 40% to 70% of all white blood cells in humans.')
-            st.markdown('##### <a href="https://en.wikipedia.org/wiki/Neutrophil">Know more.</a>',unsafe_allow_html=True)
+            st.markdown('##### <a href="https://en.wikipedia.org/wiki/Neutrophil">Know more 🔗</a>',unsafe_allow_html=True)
         if st.session_state.prediction == "Eosinophil":
            st.success('The Model Indicates that the Blood Cell identified is Eosinophil.Eosinophils, sometimes called Eosinophiles or, less commonly, Acidophils, are a variety of White Blood Cells and one of the immune system components responsible for combating multicellular parasites and certain infections in vertebrates.')
-           st.markdown('##### <a href="https://en.wikipedia.org/wiki/Eosinophil">Know more.</a>',unsafe_allow_html=True)
+           st.markdown('##### <a href="https://en.wikipedia.org/wiki/Eosinophil">Know more 🔗</a>',unsafe_allow_html=True)
         if st.session_state.prediction == "Monocyte":
            st.success(' The Model indicates that the Blood Cell identified is Monocyte.Monocytes are a type of Leukocyte or White Blood Cell. They are the largest type of Leukocyte in Blood and can differentiate into macrophages and conventional dendritic cells.')
-           st.markdown('##### <a href="https://en.wikipedia.org/wiki/Monocyte">Know more.</a>',unsafe_allow_html=True)
+           st.markdown('##### <a href="https://en.wikipedia.org/wiki/Monocyte">Know more 🔗</a>',unsafe_allow_html=True)
         st.image(st.session_state.img)
 
         
