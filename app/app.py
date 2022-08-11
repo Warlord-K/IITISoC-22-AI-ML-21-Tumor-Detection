@@ -22,7 +22,12 @@ def draw_style():
     style = """
         <style>
             header {visibility: visible;}
-            footer {visibility: hidden;}
+            footer {visibility: hidden;} 
+            .stApp {{
+             background-image: url("https://media.giphy.com/media/lkdIhnHHnFma6xvICt/giphy-downsized-large.gif");
+             background-attachment: fixed;
+             background-size: cover
+         }}
         </style>
     """
 
@@ -70,6 +75,11 @@ def prev():
             with st.expander("See Info"):
                 st.write(models_info[i])
 
+
+
+
+ 
+
 def main():
     if 'page' not in st.session_state:
         init()
@@ -85,7 +95,7 @@ def main():
             project.button('Home', on_click=set_page, args=('Homepage', True))
 
         if st.session_state.project and st.session_state.model:
-            st.radio(
+            st.selectbox(
                 'Models',
                 ['Tumour Detection','Covid - 19 Dectection','Pneumonia Detection','Blood Cells Detection'],
                 key='set',
