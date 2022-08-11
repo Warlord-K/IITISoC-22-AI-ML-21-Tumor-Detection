@@ -27,11 +27,15 @@ def main():
         st.subheader(f"Prediction is {st.session_state.prediction}")
         
         if st.session_state.prediction == "Covid":
-            st.error(' The model indicates that the patient has Covid-19, please proceed to the hospital.Quarantine and stay at home. <a href = "https://www.mohfw.gov.in/pdf/RevisedIllustratedGuidelinesforHomeIsolationofMildAsymptomaticCOVID19Cases.pdf">Know more🔗</a>',unsafe_allow_html=True)
+            st.error(' The model indicates that the patient has Covid-19, please proceed to the hospital.Quarantine and stay at home. ')
+            st.markdown('##### <a href = "https://www.mohfw.gov.in/pdf/RevisedIllustratedGuidelinesforHomeIsolationofMildAsymptomaticCOVID19Cases.pdf">Know more🔗</a>',unsafe_allow_html=True)
+        
         if st.session_state.prediction == "Viral Pneumonia":
-            st.error('The model indicates that the patient has Viral Pneumonia.It is not life threatening and is usually treatable at home,however if you have more serious symptoms,please consult a doctor.<a href = "https://www.webmd.com/lung/viral-pneumonia">Know more🔗</a>',unsafe_allow_html=True)
+            st.error('The model indicates that the patient has Viral Pneumonia.It is not life threatening and is usually treatable at home,however if you have more serious symptoms,please consult a doctor.')
+            st.markdown('##### <a href = "https://www.webmd.com/lung/viral-pneumonia">Know more🔗</a>',unsafe_allow_html=True)
+        
         if st.session_state.prediction == "Normal":
-            st.markdown('##### Congratulations,the model indicates that the patient is normal,if you seem to get any symptoms please consult a doctor.')
+            st.success('##### Congratulations,the model indicates that the patient is normal,if you seem to get any symptoms please consult a doctor.')
         st.image(st.session_state.img)
 
         

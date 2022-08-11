@@ -21,13 +21,15 @@ def draw_style():
 
     style = """
         <style>
+        .stApp {background-image: url("https://media.giphy.com/media/lkdIhnHHnFma6xvICt/giphy-downsized-large.gif");
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center;
+}
             header {visibility: visible;}
             footer {visibility: hidden;} 
-            .stApp {{
-             background-image: url("https://media.giphy.com/media/lkdIhnHHnFma6xvICt/giphy-downsized-large.gif");
-             background-attachment: fixed;
-             background-size: cover
-         }}
+            
+            
         </style>
     """
 

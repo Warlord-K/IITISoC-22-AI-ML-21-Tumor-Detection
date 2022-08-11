@@ -30,13 +30,13 @@ def main():
         prog_bar.empty()
         st.subheader(f"Prediction is {st.session_state.prediction}")
         if st.session_state.prediction == "Bacteria Pneumonia":
-            st.error('The model indicates that the patient has Bacterial Pneumonia,Bacterial pneumonia is an infection of your lungs caused by certain bacteria. The most common one is Streptococcus (pneumococcus), but other bacteria can cause it too.')
-            st.markdown('##### <a href = "https://www.mayoclinic.org/diseases-conditions/pneumonia/symptoms-causes/syc-20354204#:~:text=and%20your%20lungs-,Pneumonia%20and%20your%20lungs,within%20your%20lungs%20(alveoli).">follow this link to know more.</a>',unsafe_allow_html=True)
+            st.error('The Model has predicted that the patient has Bacterial Pneumonia. Bacterial Pneumonia is an infection of your lungs caused by Bacteria. The most common one is Streptococcus (or Pneumococcus), but other bacteria can cause it too.')
+            st.markdown('##### <a href = "https://www.mayoclinic.org/diseases-conditions/pneumonia/symptoms-causes/syc-20354204#:~:text=and%20your%20lungs-,Pneumonia%20and%20your%20lungs,within%20your%20lungs%20(alveoli).">Know more 🔗</a>',unsafe_allow_html=True)
         if st.session_state.prediction == "Virus Pneumonia":
-            st.error('The model indicates that the patient has Virus Pneumonia,Viral pneumonia is an infection of your lungs caused by a virus. The most common cause is the flu, but you can also get viral pneumonia from the common cold and other viruses.')
-            st.markdown('##### <a href = "https://www.mayoclinic.org/diseases-conditions/pneumonia/symptoms-causes/syc-20354204#:~:text=and%20your%20lungs-,Pneumonia%20and%20your%20lungs,within%20your%20lungs%20(alveoli).">follow this link to know more.</a>',unsafe_allow_html=True)        
+            st.error('The Model has predicted that the patient has Viral Pneumonia. Viral Pneumonia is an infection of your lungs caused by a Virus. The most common cause is the Flu, but you can also get Viral Pneumonia from the Common Cold or few other viruses.')
+            st.markdown('##### <a href = "https://www.mayoclinic.org/diseases-conditions/pneumonia/symptoms-causes/syc-20354204#:~:text=and%20your%20lungs-,Pneumonia%20and%20your%20lungs,within%20your%20lungs%20(alveoli).">Know more 🔗</a>',unsafe_allow_html=True)        
         if st.session_state.prediction == "Normal":
-            st.success('Congratulations,the model indicates that the patient is normal,if you seem to get any symptoms please consult a doctor.')
+            st.success('Congratulations,The Model has predicted that the Patient is Normal,Still If you have any symptoms then Please Consult a Doctor.')
         st.image(st.session_state.img)
 
         
