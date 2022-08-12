@@ -22,7 +22,7 @@ def draw_style():
 
     style = """
         <style>
-        .stApp {background-image: url("https://drive.google.com/uc?export=download&id=1iEB7v9zg3btXPCZvhe5xcID3JSU-IDDS");
+        .stApp {background-image: url("");
 background-size: cover;
 background-repeat: no-repeat;
 background-position: center;
@@ -111,7 +111,7 @@ def main():
         contact.button(
             'Contact Us', on_click=set_page, args=('Message Us',)
         )
-        st.button("About the Dataset",on_click=set_page,args="About the Dataset")
+        st.button("About the Dataset",on_click=set_page,args=("About the Dataset",))
 
         if st.session_state.page == 'Homepage':
             st.image('https://media.giphy.com/media/lkdIhnHHnFma6xvICt/giphy-downsized-large.gif')
