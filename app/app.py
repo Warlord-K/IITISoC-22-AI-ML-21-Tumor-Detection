@@ -1,4 +1,4 @@
-from src import prediction_page,about,mail,home,pneumonia,blood_cancer,covid19
+from src import prediction_page,about,mail,home,pneumonia,blood_cancer,covid19,info
 import streamlit as st
 
 
@@ -14,7 +14,8 @@ def init():
         'Message Us': mail.main,
         'Covid - 19 Dectection': covid19.main,
         'Pneumonia Detection':pneumonia.main,
-        'Blood Cells Detection':blood_cancer.main
+        'Blood Cells Detection':blood_cancer.main,
+        'About the Dataset': info.main
     }
 
 def draw_style():
@@ -109,6 +110,7 @@ def main():
         contact.button(
             'Contact Us', on_click=set_page, args=('Message Us',)
         )
+        st.button("About the Dataset",on_click=set_page,args="About the Dataset")
 
         if st.session_state.page == 'Homepage':
             st.image('https://media.giphy.com/media/lkdIhnHHnFma6xvICt/giphy-downsized-large.gif')
