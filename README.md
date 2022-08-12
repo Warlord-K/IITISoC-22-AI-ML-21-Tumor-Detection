@@ -1,4 +1,5 @@
-# TumourDetection
+# TumourDetection 
+## [Website Link](https://warlord-k-iitisoc-22-ai-ml-21-tumor-detection-appapp-zhwh17.streamlitapp.com/)
 ## **Summary**
 ### Breaking Down the Problem:-
 The Problem Statement required us to create a model for detection of Brain Tumour. Brain Tumour is usually detected by a Doctor by observing MRI Scan of the brain,after which several sophisticated medical tests such as biopsy are to confirm the tumour [1]. So we decided to use the MRI scan as input data for our model to predict whether the patient has a brain tumour or not, futhermore, we decided to classify the tumour if we get the data.
