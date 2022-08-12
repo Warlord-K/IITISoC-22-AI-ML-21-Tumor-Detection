@@ -114,7 +114,7 @@ The model is trained on 30 epochs with adam optimizer at a learning rate of 0.00
 We made and deployed the websites using the Streamlit module, it is incredibly easy to use and made our work very easy while making the website [7]. We made a homepage, About Data Page,About us page,Contact Us page and Prediction pages
 
 ### Additional Models
-     Since we were done early, We used the same architecture model and trained it on some other       datasets,which are Covid 19 Chest X-Ray [8], Pneumonia Chest X-Ray [9], Blood Cells [10].
+Since we were done early, We used the same architecture model and trained it on some other datasets,which are Covid 19 Chest X-Ray [8], Pneumonia Chest X-Ray [9], Blood Cells [10].
 
 
 
