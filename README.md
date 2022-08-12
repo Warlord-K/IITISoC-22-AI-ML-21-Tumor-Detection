@@ -100,7 +100,7 @@ MobileNetV2 is a convolutional neural network architecture that seeks to perform
 <p align="center">Fig 11: Model Architecture for MobileNet V2.</p>
 The model is trained on 30 epochs with adam optimizer at a learning rate of 0.001 and sparse categorical cross entropy as its loss function.The model’s accuracy increases steadily from 76% to 88% as shown in Fig. 13. Since the model seems to have not stabilized around an accuracy, it was trained for 30 more epochs, the model’s accuracy still steadily increased from 88% to 94%. Since its accuracy was still improving a lot, it was trained for 20 more epochs, then the accuracy seemed to stabilize around 99% as shown in Fig. 14. This architecture is best suited for our model since it achieved 99% accuracy in just 80 epochs whereas other models stabilized around the 85% mark. The model achieved an accuracy of around 99% on the train set and 96% on the test set in just 90 epochs. This is the best architecture for our model and we finalized to use MobileNetV2 as our model.
 
-![image](https://user-images.githubusercontent.com/108052351/184414772-8fb84df1-7abd-4b6d-91c9-1b186f2642e7.png) 
+![image](https://user-images.githubusercontent.com/108052351/184419535-d3e4e7ea-d099-4338-a89a-643259cbd01c.png)
 <p align="center">Fig 12: Classification Report after 80 epochs for MobileNetV2.</p>
 
 ![image](https://user-images.githubusercontent.com/108052351/184414912-944d79f9-8aff-4716-8eb4-cce25a65757d.png)
