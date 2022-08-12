@@ -37,3 +37,9 @@ We uploaded the data into a google drive,then accessed the data in google collab
 ## **Model**
  Inception  V3
 The Inception V3 is a deep learning model for image classification that is built on convolutional neural networks. The Inception V3 is an improved version of the Inception V1 basic model, which was presented as GoogleNet in 2014 [1]. Inception V3's model architecture can be seen in Figure 1.
+![image](https://user-images.githubusercontent.com/108052351/184403575-031a720e-4412-4659-ba1f-90187bf5212d.png)
+Fig 1: Model Architecture of Inception V3.
+The model was trained over 20 epochs using the Adam Optimizer with a learning rate of 0.001 and a loss function of sparse cross categorical entropy. As it can observed in Fig.2, model accuracy increased steadily from 74% to 84% and the accuracy stabilized around 87% in 20 epochs.
+
+
+
