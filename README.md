@@ -109,13 +109,27 @@ The model is trained on 30 epochs with adam optimizer at a learning rate of 0.00
 ![image](https://user-images.githubusercontent.com/108052351/184414991-1acd8884-6ff9-4dde-bf10-74aeaa573516.png)
 <p align="center">Fig 14:Accuracy for MobileNet V2 during last 20 epochs.</p>
 
-References:
+## The Website
+### Streamlit
+We made and deployed the websites using the Streamlit module, it is incredibly easy to use and made our work very easy while making the website [7]. We made a homepage, About Data Page,About us page,Contact Us page and Prediction pages
+
+### Additional Models
+     Since we were done early, We used the same architecture model and trained it on some other       datasets,which are Covid 19 Chest X-Ray [8], Pneumonia Chest X-Ray [9], Blood Cells [10].
+
+
+
+## References:
 1)	https://www.cancer.net/cancer-types/brain-tumor/diagnosis
 2)	https://www.kaggle.com/datasets/masoudnickparvar/brain-tumor-mri-dataset
 3)	https://youtu.be/0B5eIE_1vpU
 4)	https://youtu.be/tPYj3fFJGjk
 5)	https://towardsdatascience.com/transfer-learning-for-image-classification-using-tensorflow-71c359b56673
 6)	https://analyticsindiamag.com/transfer-learning-for-multi-class-image-classification-using-deep-convolutional-neural-network/
+7) https://warlord-k-iitisoc-22-ai-ml-21-tumor-detection-appapp-zhwh17.streamlitapp.com/
+8) https://www.kaggle.com/datasets/pranavraikokte/covid19-image-dataset
+9) https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia
+10) https://www.kaggle.com/datasets/paultimothymooney/blood-cells
+
 
 
 
