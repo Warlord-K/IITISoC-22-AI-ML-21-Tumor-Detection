@@ -22,10 +22,11 @@ def draw_style():
 
     style = """
         <style>
-        .stApp {background-image: url("https://media.giphy.com/media/lkdIhnHHnFma6xvICt/giphy-downsized-large.gif");
-background-size: contain;
+        .stApp {background-image: url("https://drive.google.com/uc?export=download&id=1iEB7v9zg3btXPCZvhe5xcID3JSU-IDDS");
+background-size: cover;
 background-repeat: no-repeat;
 background-position: center;
+
 }
             header {visibility: visible;}
             footer {visibility: hidden;} 
