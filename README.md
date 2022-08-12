@@ -37,7 +37,7 @@ We uploaded the data into a google drive,then accessed the data in google collab
 ## **Model**
 ### Inception  V3
  
-The Inception V3 is a deep learning model for image classification that is built on convolutional neural networks. The Inception V3 is an improved version of the Inception V1 basic model, which was presented as GoogleNet in 2014 [1]. Inception V3's model architecture can be seen in Figure 1.
+The Inception V3 is a deep learning model for image classification that is built on convolutional neural networks. The Inception V3 is an improved version of the Inception V1 basic model, which was presented as GoogleNet in 2014 . Inception V3's model architecture can be seen in Figure 1.
 ![image](https://user-images.githubusercontent.com/108052351/184403575-031a720e-4412-4659-ba1f-90187bf5212d.png)
 <p align="center">
   Fig 1: Model Architecture of Inception V3.
@@ -61,7 +61,7 @@ accuracy increased steadily from 60% to 80% and the accuracy stabilized around 8
 
 ### DenseNet 201
 
-DenseNet is a convolutional neural network where each layer is connected to all other layers that are deeper in the network, that is, the first layer is connected to the 2nd, 3rd, 4th and so on, the second layer is connected to the 3rd, 4th, 5th and so on [5].
+DenseNet is a convolutional neural network where each layer is connected to all other layers that are deeper in the network, that is, the first layer is connected to the 2nd, 3rd, 4th and so on, the second layer is connected to the 3rd, 4th, 5th and so on.
 
 ![DenseNet-201-Architecture](https://user-images.githubusercontent.com/104026985/184411917-720436fa-8bf7-4a99-8703-549779546d9e.png)
 <p align="center">Fig. 5: Model Architecture of DenseNet121.</p>
@@ -72,7 +72,7 @@ The model was trained on 20 epochs with adam optimizer at a learning rate of 0.0
 
 ### EfficientNet B2
 
-EfficientNet is a convolutional neural network architecture and scaling method that uniformly scales all dimensions of depth/width/resolution using a compound coefficient. Unlike conventional practice that arbitrary scales these factors, the EfficientNet scaling method uniformly scales network width, depth and resolution with a set of fixed scaling coefficients. For example, if we want to use 2N times more computational resources, then we can simply increase the network depth by αN, width by βN, and image size by γN, where α, β, γ are constant coefficients determined by a small grid search on the original small model. EfficientNet uses a compound coefficient φ to uniformly scales network width, depth, and resolution in a principled way [3]. The base EfficientNet-B0 network is based on the inverted bottleneck residual blocks of MobileNetV2, in addition to squeeze-and-excitation blocks. EfficientNets also transfer well and achieve state-of-the-art accuracy on CIFAR100 (91.7%), Flowers (98.8%), and 3 other transfer learning datasets, with an order of magnitude fewer parameters. Fig.7 shows the model architecture of EfficientNetB2.
+EfficientNet is a convolutional neural network architecture and scaling method that uniformly scales all dimensions of depth/width/resolution using a compound coefficient. Unlike conventional practice that arbitrary scales these factors, the EfficientNet scaling method uniformly scales network width, depth and resolution with a set of fixed scaling coefficients. For example, if we want to use 2N times more computational resources, then we can simply increase the network depth by αN, width by βN, and image size by γN, where α, β, γ are constant coefficients determined by a small grid search on the original small model. EfficientNet uses a compound coefficient φ to uniformly scales network width, depth, and resolution in a principled way. The base EfficientNet-B0 network is based on the inverted bottleneck residual blocks of MobileNetV2, in addition to squeeze-and-excitation blocks. EfficientNets also transfer well and achieve state-of-the-art accuracy on CIFAR100 (91.7%), Flowers (98.8%), and 3 other transfer learning datasets, with an order of magnitude fewer parameters. Fig.7 shows the model architecture of EfficientNetB2.
 
 ![Architecture-of-EfficientNet-B0-with-MBConv-as-Basic-building-blocks](https://user-images.githubusercontent.com/104026985/184412776-ca61c8b5-6404-45f2-b0bc-03848cefffe1.png)
 <p align="center">Figure 7: Model Architecture for EfficientNet B2.</p>
@@ -83,7 +83,7 @@ The model was trained on 20 epochs with adam optimizer at a learning rate of 0.0
 
 ### InceptionResNet V2
 
-InceptionResNetV2 is a convolutional neural network that is trained on more than a million images from the ImageNet database. The network is 164 layers deep and can classify images into 1000 object categories, such as keyboard, mouse, pencil, and many animals. It is an extension of the Inception architecture applied in conjunction with residual blocks [2]. Fig. 9 shows the model architecture of InceptionResNetV2.
+InceptionResNetV2 is a convolutional neural network that is trained on more than a million images from the ImageNet database. The network is 164 layers deep and can classify images into 1000 object categories, such as keyboard, mouse, pencil, and many animals. It is an extension of the Inception architecture applied in conjunction with residual blocks. Fig. 9 shows the model architecture of InceptionResNetV2.
 
 ![1_CYRgf1i1q_4hx5AcdcaSEg](https://user-images.githubusercontent.com/104026985/184413347-fb0b7429-47bf-4cfe-b0d9-f6078287dfb0.jpg)
 <p align="center">Fig 9: Model Architecture for InceptionResNet V2.</p>
@@ -94,7 +94,7 @@ The Model is trained on 30 epochs with adam optimizer with learning rate of 0.00
 
 ### MobileNet V2
 
-MobileNetV2 is a convolutional neural network architecture that seeks to perform well on mobile devices. It is based on an inverted residual structure where the residual connections are between the bottleneck layers [7].The intermediate expansion layer uses lightweight depthwise convolutions to filter features as a source of non-linearity. As a whole, the architecture of MobileNetV2 contains the initial fully convolution layer with 32 filters, followed by 19 residual bottleneck layers.
+MobileNetV2 is a convolutional neural network architecture that seeks to perform well on mobile devices. It is based on an inverted residual structure where the residual connections are between the bottleneck layers.The intermediate expansion layer uses lightweight depthwise convolutions to filter features as a source of non-linearity. As a whole, the architecture of MobileNetV2 contains the initial fully convolution layer with 32 filters, followed by 19 residual bottleneck layers.
 
 ![The-architecture-of-the-MobileNetv2-network](https://user-images.githubusercontent.com/104026985/184413935-13547c6b-3a42-4952-8911-b75dd192c19f.png)
 <p align="center">Fig 11: Model Architecture for MobileNet V2.</p>
@@ -114,7 +114,7 @@ The model is trained on 30 epochs with adam optimizer at a learning rate of 0.00
 We made and deployed the websites using the Streamlit module, it is incredibly easy to use and made our work very easy while making the website [7]. We made a homepage, About Data Page,About us page,Contact Us page and Prediction pages
 
 ### Additional Models
-Since we were done early, We used the same architecture model and trained it on some other datasets,which are Covid 19 Chest X-Ray [8], Pneumonia Chest X-Ray [9], Blood Cells [10].
+Since we were done early, We used the same architecture model and trained it on some other datasets,which are Covid 19 Chest X-Ray, Pneumonia Chest X-Ray , Blood Cells.
 
 
 
